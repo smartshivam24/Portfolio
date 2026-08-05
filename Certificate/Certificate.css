@@ -5,6 +5,7 @@
 }
 
 body {
+    border:10px solid red !important;
     width: 100%;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     background: linear-gradient(90deg, #4A6958, #1C1C1C);
