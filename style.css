@@ -116,7 +116,7 @@ main {
 
 /* ---------- RESPONSIVE ---------- */
 
-@media (max-width:798px) {
+@media (max-width:1005px) {
 
     .my {
         flex-direction: column;
