@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(90deg, #4A6958, #1C1C1C);
+    min-height: 100vh;
+    overflow-x: hidden;
+    flex-direction: column;
+    display: flex;
+
+    /* Tumhara current background */
+    background-color: #1C1C1C;
+
+    /* Grid Lines */
+    background-image:
+        linear-gradient(rgba(255, 221, 0, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 221, 0, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, #4A6958, #1C1C1C);
+
+    /* Grid Size */
+    background-size: 50px 50px, 50px 50px, cover;
+
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+main {
+    flex: 1;
+}
+
+
+/* ---------- HERO SECTION ---------- */
+.my {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 10%;
+    min-height: calc(100vh - 80px);
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.my-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.my-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #1C1C1C;
+    box-shadow: 0 0 15px #1C1C1C;
+
+}
+
+.about-text {
+    flex: 1;
+    max-width: 700px;
+
+}
+
+.about-text h2 {
+    font-size: 2.17rem;
+    color: yellow;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.27rem;
+    line-height: 1.8;
+    color: white;
+    letter-spacing: 1.1px;
+}
+
+/* ---------- BUTTONS ---------- */
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    border: 3px solid yellow;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: yellow;
+    color: #030a1c;
+}
+
+.btn-outline {
+    color: yellow;
+    background: transparent;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:798px) {
+
+    .my {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .my-img img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        letter-spacing: 0.1px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        display: flex;
+
+    }
+}
