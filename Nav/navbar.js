@@ -1,4 +1,6 @@
-const navbarPath = window.location.pathname.includes("/Certificate/")
+const isCertificatePage = window.location.pathname.includes("/Certificate/");
+
+const navbarPath = isCertificatePage
     ? "../Nav/navbar.html"
     : "Nav/navbar.html";
 
@@ -7,6 +9,25 @@ fetch(navbarPath)
     .then(data => {
 
         document.getElementById("navbar").innerHTML = data;
+
+        // ===== Links =====
+
+        document.getElementById("home-link").href =
+            isCertificatePage ? "../index.html" : "index.html";
+
+        document.getElementById("about-link").href =
+            isCertificatePage ? "../About/About.html" : "About/About.html";
+
+        document.getElementById("certificate-link").href =
+            isCertificatePage ? "Certificate.html" : "Certificate/Certificate.html";
+
+        document.getElementById("project-link").href =
+            isCertificatePage ? "../Projects/projects.html" : "Projects/projects.html";
+
+        document.getElementById("resume-link").href =
+            isCertificatePage ? "../resume.pdf" : "resume.pdf";
+
+        // ===== Mobile Menu =====
 
         const menuBtn = document.getElementById("menu-btn");
         const navLinks = document.getElementById("nav-links");
@@ -25,4 +46,4 @@ fetch(navbarPath)
         });
 
     })
-    .catch(error => console.error("Navbar load error:", error));
+    .catch(error => console.log(error));
