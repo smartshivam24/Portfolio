@@ -1,0 +1,435 @@
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: system-ui, -apple-system, "Segoe UI",
+        Roboto, Arial, sans-serif;
+    /* background: linear-gradient(90deg, #4A6958, #1C1C1C); */
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(86, 132, 106, 0.464),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(85, 139, 109, 0.386),
+            transparent 35%
+        ),
+        #0d0f0e;
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+/* Section */
+
+.about-section {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 25px;
+}
+
+
+/* Container */
+
+.about-container {
+    width: 100%;
+    max-width: 1150px;
+
+    display: grid;
+    grid-template-columns: 380px 1fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* Cards */
+
+.profile-card,
+.about-card {
+    position: relative;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(74, 105, 88, 0.30),
+            rgba(20, 22, 21, 0.90)
+        );
+
+    border: 1px solid yellow;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(148, 167, 96, 0.871);
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+.profile-card:hover,
+.about-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.55),
+        0 0 25px rgba(148, 168, 94, 0.429);
+}
+
+
+/* Profile */
+
+.profile-card {
+    padding: 40px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* Photo */
+
+.profile-image {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 20%;
+
+    padding: 3px;
+
+    border: 2px solid rgba(255, 255, 0, 0.65);
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 25px rgba(255, 255, 0, 0.12);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 20%;
+
+    display: block;
+
+    transition: 0.5s ease;
+}
+
+.profile-card:hover .profile-image img {
+    transform: scale(1.08);
+}
+
+
+/* Name */
+
+.profile-card h1 {
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    color: rgba(255, 255, 0, 0.85);
+
+    margin-bottom: 10px;
+}
+
+
+/* Job */
+
+.profile-card h3 {
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #d7ddd9;
+
+    margin-bottom: 7px;
+}
+
+
+/* Profile Text */
+
+.profile-text {
+    color: #aebbb4;
+
+    font-size: 15px;
+}
+
+
+/* Line */
+
+.profile-line {
+    width: 70px;
+    height: 2px;
+
+    background: rgba(255, 255, 0, 0.65);
+
+    margin: 22px 0;
+}
+
+
+/* Quote */
+
+.profile-quote {
+    color: #c9d1cc;
+
+    font-size: 14px;
+
+    font-style: italic;
+}
+
+
+/* About */
+
+.about-card {
+    padding: 45px;
+}
+
+
+/* Badge */
+
+.about-badge {
+    display: inline-block;
+
+    padding: 6px 16px;
+
+    margin-bottom: 15px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(255, 255, 0, 0.45);
+
+    background: rgba(255, 255, 0, 0.04);
+
+    color: rgba(255, 255, 0, 0.85);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* Heading */
+
+.about-card h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+.about-card h2 span {
+    color: rgba(255, 255, 0, 0.80);
+}
+
+
+/* Paragraph */
+
+.about-card p {
+    color: #d1d8d4;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* Skills */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+.skills span {
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(255, 255, 0, 0.35);
+
+    background: rgba(255, 255, 0, 0.04);
+
+    color: #eeeeee;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.skills span:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255, 255, 0, 0.85);
+
+    color: #111;
+
+    border-color: yellow;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .about-container {
+        grid-template-columns: 320px 1fr;
+
+        gap: 20px;
+    }
+    .about-section{
+        padding: 70px 30px;
+    }
+
+    .profile-card {
+        padding: 35px 20px;
+    }
+
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-card h1 {
+        font-size: 24px;
+    }
+
+    .about-card {
+        padding: 35px;
+    }
+
+    .about-card h2 {
+        font-size: 36px;
+    }
+
+    .about-card p {
+        font-size: 16px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .profile-card {
+        min-height: 450px;
+    }
+
+    .about-card {
+        padding: 30px 22px;
+    }
+
+    .about-card h2 {
+        font-size: 32px;
+    }
+
+    .about-card p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 400px) {
+
+    .about-section {
+        padding: 50px 15px;
+    }
+
+    .profile-card {
+        padding: 30px 15px;
+    }
+
+    .profile-image {
+        width: 145px;
+        height: 145px;
+    }
+
+    .profile-card h1 {
+        font-size: 22px;
+    }
+
+    .profile-card h3 {
+        font-size: 16px;
+    }
+
+    .about-card h2 {
+        font-size: 28px;
+    }
+
+    .about-card p {
+        font-size: 14px;
+    }
+
+    .skills span {
+        font-size: 12px;
+        padding: 7px 13px;
+    }
+}
