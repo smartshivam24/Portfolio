@@ -1,0 +1,340 @@
+/* ===== Reset ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(74, 105, 88, 0.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(74, 105, 88, 0.35),
+            transparent 35%
+        ),
+        #0d0f0e;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===== Projects Section ===== */
+
+.projects-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 7%;
+}
+
+
+/* ===== Heading ===== */
+
+.projects-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.projects-header h1 {
+    font-size: 44px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.projects-header p {
+    color: #a8a8bb;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ===== Cards Grid ===== */
+
+.projects-container {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+
+/* ===== Project Card ===== */
+
+.project-card {
+    background: #1c1c1c;
+    border: 1px solid #494c29;
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: 0.35s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #cad927;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ===== Project Image ===== */
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 185px;
+    overflow: hidden;
+    background: #1c1c1c;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+
+/* ===== Live Badge ===== */
+
+.live-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: rgb(102, 134, 102);
+    color: white;
+
+    padding: 8px 15px;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+}
+
+
+/* ===== Card Content ===== */
+
+.project-content {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+/* ===== Project Title ===== */
+
+.project-title-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.project-title {
+    font-size: 20px;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+
+/* ===== Description ===== */
+
+.project-description {
+    color: #a6a6b8;
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin: 15px 0 20px;
+}
+
+
+/* ===== Technology Tags ===== */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.tag {
+    padding: 6px 11px;
+
+    background: #fceb012c;
+    border: 1px solid yellow;
+
+    border-radius: 5px;
+
+    color: white;
+    font-size: 12px;
+}
+
+
+/* ===== Bottom Buttons ===== */
+
+.project-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.project-btn {
+    height: 41px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+/* ===== Source Button ===== */
+
+.source-btn {
+    color: white;
+    border: 1px solid yellow;
+    background: transparent;
+}
+
+.source-btn:hover {
+    background:#a2b01fb3;
+    color: white;
+}
+
+
+/* ===== Demo Button ===== */
+
+.live-btn {
+    color: white;
+
+    background:#a2b01fb3;
+
+    border: none;
+}
+
+.live-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(93, 105, 30, 0.347);
+}
+
+
+/* ===== Tablet ===== */
+
+@media (max-width: 1000px) {
+
+    .projects-section {
+        padding: 45px 5%;
+        text-align: center;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ===== Mobile ===== */
+
+@media (max-width: 650px) {
+
+    .projects-section {
+        padding: 40px 18px;
+    }
+
+    .projects-header {
+        margin-bottom: 35px;
+    }
+
+    .projects-header h1 {
+        font-size: 34px;
+    }
+
+    .projects-header p {
+        font-size: 14px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-image {
+        height: 190px;
+    }
+
+    .project-content {
+        padding: 17px;
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+}
+
+
+/* ===== Small Mobile ===== */
+
+@media (max-width: 400px) {
+
+    .projects-section {
+        padding: 30px 25px;
+    }
+
+    .project-image {
+        height: 175px;
+    }
+
+    .project-buttons {
+        grid-template-columns: 1fr;
+    }
+}

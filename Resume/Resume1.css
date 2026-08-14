@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background:
+        radial-gradient(circle at 10% 20%,
+            rgba(74, 105, 88, 0.45),
+            transparent 35%),
+        radial-gradient(circle at 90% 80%,
+            rgba(74, 105, 88, 0.35),
+            transparent 35%),
+        #0d0f0e;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/* Resume Section */
+
+.resume-section {
+    min-height: 450px;
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(80, 20, 120, 0.12),
+            transparent 45%
+        );
+}
+
+
+/* Title */
+
+.resume-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Icon */
+
+.resume-icon {
+    width: 95px;
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    background: #bac614;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 20px rgba(219, 197, 2, 0.47);
+
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+
+/* Title Text */
+
+.resume-title h1 {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 700;
+
+    background: linear-gradient(
+        90deg,
+        #29e448,
+        #23a7dc
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Description */
+
+.resume-text {
+    margin-bottom: 35px;
+
+    font-size: 18px;
+
+    color: #d0d0d0;
+}
+
+
+/* Buttons */
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 40px;
+
+    margin-bottom: 50px;
+}
+
+
+/* Button */
+
+.resume-btn {
+    width: 300px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    transition: all 0.35s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Button Shine */
+
+.resume-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: skewX(-25deg);
+
+    transition: left 0.6s ease;
+}
+
+.resume-btn:hover::before {
+    left: 150%;
+}
+
+
+/* Download */
+
+.download-btn {
+    background: linear-gradient(
+        90deg,
+        #20e335,
+        #27dc38
+    );
+
+    box-shadow:
+        0 8px 25px rgba(30, 230, 50, 0.25);
+}
+
+.download-btn:hover {
+    transform: translateY(-6px) scale(1.02);
+
+    box-shadow:
+        0 15px 35px rgba(30, 230, 50, 0.4);
+}
+
+
+/* View */
+
+.view-btn {
+    background: linear-gradient(
+        90deg,
+        #38b9d8,
+        #18a8c8
+    );
+
+    box-shadow:
+        0 8px 25px rgba(30, 180, 220, 0.25);
+}
+
+.view-btn:hover {
+    transform: translateY(-6px) scale(1.02);
+
+    box-shadow:
+        0 15px 35px rgba(30, 180, 220, 0.4);
+}
+
+
+/* Click */
+
+.resume-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* Update Badge */
+
+.resume-update {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+
+    gap: 15px;
+
+    min-width: 555px;
+
+    padding: 18px 28px;
+
+    border-radius: 18px;
+
+    background: rgba(60, 20, 75, 0.45);
+
+    border: 1px solid rgba(255, 0, 220, 0.35);
+
+    box-shadow:
+        0 0 20px rgba(170, 0, 255, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* Animated Border */
+
+.resume-update::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 2px;
+
+    animation: borderMove 2.5s linear infinite;
+}
+
+
+/* Badge Icon */
+
+.resume-update span {
+    font-size: 24px;
+
+    animation: rocket 1.5s ease-in-out infinite;
+}
+
+
+/* Badge Text */
+
+.resume-update p {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* Icon Animation */
+
+@keyframes floatIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Rocket Animation */
+
+@keyframes rocket {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Border Animation */
+
+@keyframes borderMove {
+
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+    .resume-section {
+        padding: 45px 15px;
+    }
+
+    .resume-title {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .resume-title h1 {
+        font-size: 38px;
+    }
+
+    .resume-icon {
+        width: 75px;
+        height: 90px;
+
+        font-size: 50px;
+    }
+
+    .resume-text {
+        font-size: 15px;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+
+        gap: 15px;
+
+        width: 100%;
+        align-items: center;
+    }
+
+    .resume-btn {
+        width: min(325px, 90vw);
+        height: 60px;
+
+        font-size: 16px;
+    }
+
+    .resume-update {
+        min-width: auto;
+        width: min(555px, 90vw);
+
+        padding: 15px;
+
+        gap: 10px;
+    }
+
+    .resume-update p {
+        font-size: 13px;
+    }
+}
